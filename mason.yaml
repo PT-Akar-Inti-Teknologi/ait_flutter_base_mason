@@ -1,6 +1,8 @@
 bricks:
   ait_new_page:
     path: ./ait_new_page/
+  ait_new_package:
+    path: ./ait_new_package/
   #   git:
   #     url: https://github.com/felangel/mason.git
   #     path: bricks/widget

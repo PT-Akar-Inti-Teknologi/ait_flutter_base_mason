@@ -22,3 +22,8 @@ vars:
     description: create a new page with a new widget
     default: new page
     prompt: What is your page name (lowercase)?
+  use_formx:
+    type: boolean
+    description: Cubit use formx
+    default: false
+    prompt: Does your cubit use formx

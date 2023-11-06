@@ -6,8 +6,12 @@ import 'package:path/path.dart' as path;
 void run(HookContext context) async {
   final progress = context.logger.progress('Installing packages');
   final generator = await MasonGenerator.fromBrick(
-    Brick.path(
-        '/home/skypea/kerjaan/AIT/tools/mason/ait_flutter_mason/ait_cubit/'),
+    Brick.git(
+      GitPath(
+        'https://github.com/PT-Akar-Inti-Teknologi/ait_flutter_mason.git',
+        path: 'ait_cubit',
+      ),
+    ),
   );
   final String name = context.vars['name'];
   final bool use_formx = context.vars['use_formx'];

@@ -1,0 +1,7 @@
+import 'package:common_dependency/common_dependency.dart';
+
+class {{cubit_formx}} extends FormxMeta {
+    static const fieldNames = (example: 'example');
+
+    {{cubit_formx}}():super([]);
+  }

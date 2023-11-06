@@ -1,1 +1,2 @@
-export 'pages/{{name.snakeCase()}}.dart';
+export 'pages/pages.dart';
+export 'widgets/widgets.dart';

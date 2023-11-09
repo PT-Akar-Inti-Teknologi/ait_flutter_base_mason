@@ -20,7 +20,7 @@ class {{name.pascalCase()}}UI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BasePage<{{name.pascalCase()}}Cubit,{{name.pascalCase()}}State>(
+    return const BasePage<{{name.pascalCase()}}Cubit,{{name.pascalCase()}}State>(
     child: DesignScaffold(
       body: Center(
               child: Placeholder(

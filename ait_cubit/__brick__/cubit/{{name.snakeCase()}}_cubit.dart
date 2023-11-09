@@ -12,9 +12,7 @@ class {{cubit}} extends Cubit<{{state}}> with SyncEmit<{{state}}> {{#use_formx}}
   @override
   final FormxMeta formxMeta;
   {{cubit}}._({required this.formxMeta}):super({{state}}.initial(formxMeta));
-  factory {{cubit}}() => {{cubit}}._(
-        formxMeta: {{cubit_formx}}(),
-  );
+  factory {{cubit}}() => {{cubit}}._(formxMeta: {{cubit_formx}}());
   {{/use_formx}}
   {{^use_formx}}
   {{cubit}}():super({{state}}.initial());

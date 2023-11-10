@@ -7,7 +7,7 @@ part '{{name.snakeCase()}}_cubit.freezed.dart';
 class {{cubit}} extends Cubit<{{state}}> with SyncEmit<{{state}}> {{#use_formx}}, 
         FormxStateManager,
         FormxBlocMixin<{{state}}>
-  {{/use_formx}} {
+  {{/use_formx}} implements BasePageListener<{{state}}> {
   {{#use_formx}}
   @override
   final FormxMeta formxMeta;
@@ -17,4 +17,8 @@ class {{cubit}} extends Cubit<{{state}}> with SyncEmit<{{state}}> {{#use_formx}}
   {{^use_formx}}
   {{cubit}}():super({{state}}.initial());
   {{/use_formx}}
+  @override
+  clearErrorState() {
+    syncEmit((state) => state.copyWith(failure: null));
+  }
   }

@@ -7,7 +7,8 @@ part '{{response.snakeCase()}}.g.dart';
 class {{response}} with _${{response}} {
   const factory {{response}}({
     {{#object}}
-    required {{type.pascalCase()}} {{name.camelCase()}},
+    {{#is_list}} List<{{type.pascalCase()}}>? {{name.camelCase()}},{{/is_list}}
+    {{^is_list}} {{type.pascalCase()}}? {{name.camelCase()}},{{/is_list}}
     {{/object}}
   }) = _{{response}};
 
@@ -20,7 +21,8 @@ class {{response}} with _${{response}} {
 class {{type.pascalCase()}} with _${{type.pascalCase()}} {
   const factory {{type.pascalCase()}}({
     {{#object}}
-    required {{type.pascalCase()}} {{name.camelCase()}},
+    {{#is_list}} List<{{type.pascalCase()}}>? {{name.camelCase()}},{{/is_list}}
+    {{^is_list}} {{type.pascalCase()}}? {{name.camelCase()}},{{/is_list}}
     {{/object}}
   }) = _{{type.pascalCase()}};
   factory {{type.pascalCase()}}.fromJson(Map<String, dynamic> json) =>
@@ -32,7 +34,8 @@ class {{type.pascalCase()}} with _${{type.pascalCase()}} {
   class {{type.pascalCase()}} with _${{type.pascalCase()}} {
     const factory {{type.pascalCase()}}({
       {{#object}}
-      required {{type.pascalCase()}} {{name.camelCase()}},
+      {{#is_list}} List<{{type.pascalCase()}}>? {{name.camelCase()}},{{/is_list}}
+      {{^is_list}} {{type.pascalCase()}}? {{name.camelCase()}},{{/is_list}}
       {{/object}}
     }) = _{{type.pascalCase()}};
     factory {{type.pascalCase()}}.fromJson(Map<String, dynamic> json) =>

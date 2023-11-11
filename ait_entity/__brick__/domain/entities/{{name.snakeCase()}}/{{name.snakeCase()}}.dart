@@ -6,7 +6,8 @@ part '{{name.snakeCase()}}.freezed.dart';
 class {{entity}} with _${{entity}} {
   const factory {{entity}}({
     {{#object}}
-    required {{type.pascalCase()}} {{name.camelCase()}},
+    {{#is_list}}required List<{{type.pascalCase()}}> {{name.camelCase()}},{{/is_list}}
+    {{^is_list}}required {{type.pascalCase()}} {{name.camelCase()}},{{/is_list}}
     {{/object}}
   }) = _{{entity}};
 }
@@ -17,7 +18,8 @@ class {{entity}} with _${{entity}} {
 class {{type.pascalCase()}} with _${{type.pascalCase()}} {
   const factory {{type.pascalCase()}}({
     {{#object}}
-    required {{type.pascalCase()}} {{name.camelCase()}},
+    {{#is_list}}required List<{{type.pascalCase()}}> {{name.camelCase()}},{{/is_list}}
+    {{^is_list}}required {{type.pascalCase()}} {{name.camelCase()}},{{/is_list}}
     {{/object}}
   }) = _{{type.pascalCase()}};
 }
@@ -27,7 +29,8 @@ class {{type.pascalCase()}} with _${{type.pascalCase()}} {
   class {{type.pascalCase()}} with _${{type.pascalCase()}} {
     const factory {{type.pascalCase()}}({
       {{#object}}
-      required {{type.pascalCase()}} {{name.camelCase()}},
+      {{#is_list}}required List<{{type.pascalCase()}}> {{name.camelCase()}},{{/is_list}}
+      {{^is_list}}required {{type.pascalCase()}} {{name.camelCase()}},{{/is_list}}
       {{/object}}
     }) = _{{type.pascalCase()}};
   }

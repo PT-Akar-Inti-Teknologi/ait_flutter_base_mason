@@ -21,17 +21,17 @@ class {{type.pascalCase()}} with _${{type.pascalCase()}} {
     {{/object}}
   }) = _{{type.pascalCase()}};
 }
-{{#object}}
-{{#is_object}}
-@freezed
-class {{type.pascalCase()}} with _${{type.pascalCase()}} {
-  const factory {{type.pascalCase()}}({
-    {{#object}}
-    required {{type.pascalCase()}} {{name.camelCase()}},
-    {{/object}}
-  }) = _{{type.pascalCase()}};
-}
-{{/is_object}}
-{{/object}}
+  {{#object}}
+  {{#is_object}}
+  @freezed
+  class {{type.pascalCase()}} with _${{type.pascalCase()}} {
+    const factory {{type.pascalCase()}}({
+      {{#object}}
+      required {{type.pascalCase()}} {{name.camelCase()}},
+      {{/object}}
+    }) = _{{type.pascalCase()}};
+  }
+  {{/is_object}}
+  {{/object}}
 {{/is_object}}
 {{/object}}

@@ -26,19 +26,19 @@ class {{type.pascalCase()}} with _${{type.pascalCase()}} {
   factory {{type.pascalCase()}}.fromJson(Map<String, dynamic> json) =>
       _${{type.pascalCase()}}FromJson(json);
 }
-{{#object}}
-{{#is_object}}
-@freezed
-class {{type.pascalCase()}} with _${{type.pascalCase()}} {
-  const factory {{type.pascalCase()}}({
-    {{#object}}
-    required {{type.pascalCase()}} {{name.camelCase()}},
-    {{/object}}
-  }) = _{{type.pascalCase()}};
-  factory {{type.pascalCase()}}.fromJson(Map<String, dynamic> json) =>
-      _${{type.pascalCase()}}FromJson(json);
-}
-{{/is_object}}
-{{/object}}
+  {{#object}}
+  {{#is_object}}
+  @freezed
+  class {{type.pascalCase()}} with _${{type.pascalCase()}} {
+    const factory {{type.pascalCase()}}({
+      {{#object}}
+      required {{type.pascalCase()}} {{name.camelCase()}},
+      {{/object}}
+    }) = _{{type.pascalCase()}};
+    factory {{type.pascalCase()}}.fromJson(Map<String, dynamic> json) =>
+        _${{type.pascalCase()}}FromJson(json);
+  }
+  {{/is_object}}
+  {{/object}}
 {{/is_object}}
 {{/object}}

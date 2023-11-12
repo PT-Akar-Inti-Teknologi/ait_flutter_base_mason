@@ -3,6 +3,9 @@ part of '../pre_gen.dart';
 String getType(String key, dynamic items) {
   String dataType = '';
   dataType = items.runtimeType.toString();
+  if (dataType == 'Null') {
+    dataType = 'String';
+  }
   if (dataType == '_Map<String, dynamic>') {
     dataType = key.pascalCase;
   }
@@ -22,6 +25,7 @@ String getType(String key, dynamic items) {
 dynamic getDefaultValue(dynamic value) {
   if (value is String) return "";
   if (value is List) return [];
+  if (value is bool) return false;
   if (value is num)
     return 0;
   else

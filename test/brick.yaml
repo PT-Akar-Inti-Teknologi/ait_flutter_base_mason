@@ -10,3 +10,8 @@ vars:
     description: Your name
     default: Dash
     prompt: What is your name?
+  json:
+    type: string
+    description: json data
+    default: {}
+    prompt: input json

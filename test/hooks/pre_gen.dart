@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:io';
+import 'package:path/path.dart' as path;
 import 'package:mason/mason.dart';
 
 part 'pre_gen_utils/get_type.dart';
@@ -7,7 +10,6 @@ void run(HookContext context) async {
   final name = context.vars['name'];
   final entity = '${name.toString().pascalCase}';
   final response = '${name.toString().pascalCase}Response';
-  print(response);
   final data = await context.vars;
   final remapedData = remap(data);
   final joinedData = {
@@ -16,6 +18,11 @@ void run(HookContext context) async {
     "object": remapedData,
   };
   context.vars.addAll(joinedData);
+  // write temp json file
+  String jsonString = jsonEncode(context.vars);
+  String currentDirectory = Directory.current.path;
+  String filePath = path.join(currentDirectory, 'config.json');
+  File(filePath).writeAsStringSync(jsonString);
 }
 
 List<Map<String, dynamic>> remap(Map<String, dynamic> data) {

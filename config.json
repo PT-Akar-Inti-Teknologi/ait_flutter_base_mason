@@ -1,0 +1,79 @@
+{
+  "id": 123,
+  "point": 10.2,
+  "pin": "123456",
+  "detail": ["test", "abc"],
+  "profile": {
+    "phone_number": "6285770427123",
+    "email": "sabbana.azmi@akarinti.tech",
+    "fullname": "Sabbana Azmi"
+  },
+  "member_preferences": [
+    { "id": 123, "name": "music" },
+    { "id": 122, "name": "travel" }
+  ],
+  "name": "coba",
+  "entity": "Coba",
+  "response": "CobaResponse",
+  "object": [
+    { "type": "int", "name": "id", "is_list": false, "is_object": false },
+    { "type": "double", "name": "point", "is_list": false, "is_object": false },
+    { "type": "String", "name": "pin", "is_list": false, "is_object": false },
+    {
+      "type": "List<String>",
+      "name": "detail",
+      "is_list": true,
+      "is_object": false
+    },
+    {
+      "type": "Profile",
+      "name": "profile",
+      "is_list": false,
+      "is_object": true,
+      "object": [
+        {
+          "type": "String",
+          "name": "phone_number",
+          "is_list": false,
+          "is_object": false
+        },
+        {
+          "type": "String",
+          "name": "email",
+          "is_list": false,
+          "is_object": false
+        },
+        {
+          "type": "String",
+          "name": "fullname",
+          "is_list": false,
+          "is_object": false
+        }
+      ]
+    },
+    {
+      "type": "List<MemberPreferences>",
+      "name": "member_preferences",
+      "is_list": true,
+      "is_object": true,
+      "object": [
+        { "type": "int", "name": "id", "is_list": false, "is_object": false },
+        {
+          "type": "String",
+          "name": "name",
+          "is_list": false,
+          "is_object": false
+        },
+        { "type": "int", "name": "id", "is_list": false, "is_object": false },
+        {
+          "type": "String",
+          "name": "name",
+          "is_list": false,
+          "is_object": false
+        }
+      ]
+    },
+    { "type": "String", "name": "name", "is_list": false, "is_object": false }
+  ]
+}
+

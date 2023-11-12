@@ -1,0 +1,15 @@
+{
+  "id": 123,
+  "point": 10.2,
+  "pin": "123456",
+  "detail": ["test", "abc"],
+  "profile": {
+    "phone_number": "6285770427123",
+    "email": "sabbana.azmi@akarinti.tech",
+    "fullname": "Sabbana Azmi"
+  },
+  "member_preferences": [
+    { "id": 123, "name": "music" },
+    { "id": 122, "name": "travel" }
+  ]
+}

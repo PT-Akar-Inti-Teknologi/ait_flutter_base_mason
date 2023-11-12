@@ -1,0 +1,52 @@
+{
+  "name": "users",
+  "response": "response",
+  "object": [
+    {
+      "is_object": false,
+      "is_list": false,
+      "name": "title",
+      "type": "string"
+    },
+    {
+      "is_object": false,
+      "is_list": false,
+      "name": "body",
+      "type": "string"
+    },
+    {
+      "is_object": true,
+      "is_list": true,
+      "name": "data",
+      "type": "users_data",
+      "object": [
+        {
+          "name": "phone_number",
+          "is_object": false,
+          "is_list": false,
+          "type": "string"
+        },
+        {
+          "name": "member_detail",
+          "is_object": true,
+          "is_list": true,
+          "type": "member_detail",
+          "object": [
+            {
+              "name": "member_id",
+              "is_object": false,
+              "is_list": false,
+              "type": "string"
+            },
+            {
+              "name": "rewards",
+              "is_object": false,
+              "is_list": true,
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

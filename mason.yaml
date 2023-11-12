@@ -13,3 +13,5 @@ bricks:
       path: ait_cubit
   ait_entity:
     path: ait_entity/
+  test:
+    path: test/

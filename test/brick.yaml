@@ -1,8 +1,7 @@
-name: ait_entity
+name: test
 description: A new brick created with the Mason CLI.
 
 version: 0.1.0+1
-
 environment:
   mason: ">=0.1.0-dev.51 <0.1.0"
 vars:

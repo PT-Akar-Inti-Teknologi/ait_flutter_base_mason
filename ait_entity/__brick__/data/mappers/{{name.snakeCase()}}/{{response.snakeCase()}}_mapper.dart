@@ -6,11 +6,11 @@ extension {{response}}Mapper on {{response}} {
       return {{entity}}(
     {{#object}}
     {{^is_object}}
-      {{^is_list}}{{name.camelCase()}}: {{name.camelCase()}} ?? '',{{/is_list}}
-      {{#is_list}}{{name.camelCase()}}: {{name.camelCase()}} ?? [],{{/is_list}}
+      {{^is_string}}{{name.camelCase()}}: {{name.camelCase()}} ?? {{default}},{{/is_string}}
+      {{#is_string}}{{name.camelCase()}}: {{name.camelCase()}} ?? '{{default}}',{{/is_string}}
     {{/is_object}}
     {{#is_object}}
-      {{^is_list}}{{name.camelCase()}}: {{name.camelCase()}}?.toEntity ?? const {{type.pascalCase()}}Response().toEntity,{{/is_list}}
+      {{^is_list}}{{name.camelCase()}}: {{name.camelCase()}}?.toEntity ?? const {{type}}Response().toEntity,{{/is_list}}
       {{#is_list}}{{name.camelCase()}}: {{name.camelCase()}}?.map((e)=>e.toEntity).toList() ?? [],{{/is_list}}
     {{/is_object}}
     {{/object}}
@@ -20,16 +20,16 @@ extension {{response}}Mapper on {{response}} {
 
 {{#object}}
 {{#is_object}}
-extension {{type.pascalCase()}}ResponseMapper on {{type.pascalCase()}}Response {
-  {{type.pascalCase()}} get toEntity {
-      return {{type.pascalCase()}}(
+extension {{type}}ResponseMapper on {{type}}Response {
+  {{type}} get toEntity {
+      return {{type}}(
     {{#object}}
     {{^is_object}}
-      {{^is_list}}{{name.camelCase()}}: {{name.camelCase()}} ?? '',{{/is_list}}
-      {{#is_list}}{{name.camelCase()}}: {{name.camelCase()}} ?? [],{{/is_list}}
+      {{^is_string}}{{name.camelCase()}}: {{name.camelCase()}} ?? {{default}},{{/is_string}}
+      {{#is_string}}{{name.camelCase()}}: {{name.camelCase()}} ?? '{{default}}' ,{{/is_string}}
     {{/is_object}}
     {{#is_object}}
-      {{^is_list}}{{name.camelCase()}}: {{name.camelCase()}}?.toEntity ?? const {{type.pascalCase()}}Response().toEntity,{{/is_list}}
+      {{^is_list}}{{name.camelCase()}}: {{name.camelCase()}}?.toEntity ?? const {{type}}Response().toEntity,{{/is_list}}
       {{#is_list}}{{name.camelCase()}}: {{name.camelCase()}}?.map((e)=>e.toEntity).toList() ?? [],{{/is_list}}
     {{/is_object}}
     {{/object}}
@@ -38,16 +38,16 @@ extension {{type.pascalCase()}}ResponseMapper on {{type.pascalCase()}}Response {
   }
 {{#object}}
 {{#is_object}}
-extension {{type.pascalCase()}}ResponseMapper on {{type.pascalCase()}}Response {
-  {{type.pascalCase()}} get toEntity {
-      return {{type.pascalCase()}}(
+extension {{type}}ResponseMapper on {{type}}Response {
+  {{type}} get toEntity {
+      return {{type}}(
     {{#object}}
     {{^is_object}}
-      {{^is_list}}{{name.camelCase()}}: {{name.camelCase()}} ?? '',{{/is_list}}
-      {{#is_list}}{{name.camelCase()}}: {{name.camelCase()}} ?? [],{{/is_list}}
+      {{^is_string}}{{name.camelCase()}}: {{name.camelCase()}} ?? {{default}},{{/is_string}}
+      {{#is_string}}{{name.camelCase()}}: {{name.camelCase()}} ?? '{{default}}' ,{{/is_string}}
     {{/is_object}}
     {{#is_object}}
-      {{^is_list}}{{name.camelCase()}}: {{name.camelCase()}}?.toEntity ?? const {{type.pascalCase()}}Response().toEntity,{{/is_list}}
+      {{^is_list}}{{name.camelCase()}}: {{name.camelCase()}}?.toEntity ?? const {{type}}Response().toEntity,{{/is_list}}
       {{#is_list}}{{name.camelCase()}}: {{name.camelCase()}}?.map((e)=>e.toEntity).toList() ?? [],{{/is_list}}
     {{/is_object}}
     {{/object}}

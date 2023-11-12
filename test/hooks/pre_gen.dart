@@ -10,9 +10,12 @@ void run(HookContext context) async {
   final name = context.vars['name'];
   final entity = '${name.toString().pascalCase}';
   final response = '${name.toString().pascalCase}Response';
+  context.vars.removeWhere((key, value) => key == 'name');
   final data = await context.vars;
+  context.vars = {};
   final remapedData = remap(data);
   final joinedData = {
+    "name": name,
     "entity": entity,
     "response": response,
     "object": remapedData,
@@ -42,6 +45,7 @@ List<Map<String, dynamic>> remap(Map<String, dynamic> data) {
           if (isObject) "object": getObject(value),
         },
       );
+      print('key: $key value: $value remappedItem: $remapedItems');
       remapedData.add(remapedItems);
     },
   );
@@ -51,6 +55,7 @@ List<Map<String, dynamic>> remap(Map<String, dynamic> data) {
 dynamic getObject(dynamic data) {
   if (data is Map<String, dynamic>) return remap(data);
   if (data is List<dynamic>) {
-    return data.map((e) => remap(e)).toList().expand((i) => i).toList();
+    return remap(data.first);
+    // return data.map((e) => remap(e)).toList().expand((i) => i).toList();
   }
 }

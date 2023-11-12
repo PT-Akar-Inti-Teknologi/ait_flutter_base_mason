@@ -9,12 +9,21 @@ String getType(String key, dynamic items) {
   if (items is List) {
     (items).forEach(
       (element) {
-        dataType = 'List<${element.runtimeType}>';
-        if (dataType == 'List<_Map<String, dynamic>>') {
-          dataType = 'List<${key.pascalCase}>';
+        dataType = element.runtimeType.toString();
+        if (element.runtimeType.toString() == '_Map<String, dynamic>') {
+          dataType = key.pascalCase;
         }
       },
     );
   }
   return dataType;
+}
+
+dynamic getDefaultValue(dynamic value) {
+  if (value is String) return "";
+  if (value is List) return [];
+  if (value is num)
+    return 0;
+  else
+    return '';
 }

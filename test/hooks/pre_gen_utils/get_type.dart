@@ -9,9 +9,9 @@ String getType(String key, dynamic items) {
   if (items is List) {
     (items).forEach(
       (element) {
-        dataType = 'List<${element.runtimeType}>';
+        dataType = element.runtimeType.toString();
         if (dataType == 'List<_Map<String, dynamic>>') {
-          dataType = 'List<${key.pascalCase}>';
+          dataType = key.pascalCase;
         }
       },
     );

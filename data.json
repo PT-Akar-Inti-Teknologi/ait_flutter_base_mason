@@ -11,5 +11,30 @@
   "member_preferences": [
     { "id": 123, "name": "music" },
     { "id": 122, "name": "travel" }
-  ]
+  ],
+  "response_message": {
+    "id": "Member belum verifikasi!",
+    "en": "Member is not verified!"
+  },
+  "errors_field": [
+    {
+      "field": "phone_number",
+      "message": {
+        "id": "Format nomor telepon salah (62xxx)",
+        "en": "Incorrect phone number format (62xxx)",
+        "current_language": "id"
+      }
+    }
+  ],
+  "errors": [
+    {
+      "field": "phone_number",
+      "message": {
+        "id": "Format nomor telepon salah (62xxx)",
+        "en": "Incorrect phone number format (62xxx)",
+        "current_language": "id"
+      }
+    }
+  ],
+  "preference_ids": ["2B7E2OeGbw", "Z3MoYLe9lD", "pR2QjAod3r"]
 }

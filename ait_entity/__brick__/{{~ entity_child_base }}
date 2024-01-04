@@ -1,0 +1,6 @@
+@freezed
+class {{type}} with _${{type}} {
+  const factory {{type}}({
+    {{> entity_variable_base}}
+  }) = _{{type}};
+}

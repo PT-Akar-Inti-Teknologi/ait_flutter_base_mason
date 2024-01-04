@@ -7,10 +7,8 @@ bricks:
     git:
       url: "https://github.com/PT-Akar-Inti-Teknologi/ait_flutter_mason.git"
       path: ait_new_package
-  ait_entity:
-    git:
-      url: "https://github.com/PT-Akar-Inti-Teknologi/ait_flutter_mason.git"
-      path: ait_entity
   ait_cubit:
-    path: "ait_cubit/"
+    path: ait_cubit/
+  ait_entity:
+    path: ait_entity/
 

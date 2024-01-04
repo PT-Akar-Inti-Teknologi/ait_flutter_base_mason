@@ -5,35 +5,16 @@ part '{{name.snakeCase()}}.freezed.dart';
 @freezed
 class {{entity}} with _${{entity}} {
   const factory {{entity}}({
-    {{#object}}
-    {{#is_list}}required List<{{type}}> {{name.camelCase()}},{{/is_list}}
-    {{^is_list}}required {{type}} {{name.camelCase()}},{{/is_list}}
-    {{/object}}
+    {{> entity_variable_base}}
   }) = _{{entity}};
 }
 
 {{#object}}
 {{#is_object}}
-@freezed
-class {{type}} with _${{type}} {
-  const factory {{type}}({
-    {{#object}}
-    {{#is_list}}required List<{{type}}> {{name.camelCase()}},{{/is_list}}
-    {{^is_list}}required {{type}} {{name.camelCase()}},{{/is_list}}
-    {{/object}}
-  }) = _{{type}};
-}
+{{> entity_child_base}}
   {{#object}}
   {{#is_object}}
-  @freezed
-  class {{type}} with _${{type}} {
-    const factory {{type}}({
-      {{#object}}
-      {{#is_list}}required List<{{type}}> {{name.camelCase()}},{{/is_list}}
-      {{^is_list}}required {{type}} {{name.camelCase()}},{{/is_list}}
-      {{/object}}
-    }) = _{{type}};
-  }
+  {{> entity_child_base}}
   {{/is_object}}
   {{/object}}
 {{/is_object}}

@@ -1,17 +1,16 @@
 bricks:
   ait_new_page:
     git:
-      url: https://github.com/PT-Akar-Inti-Teknologi/ait_flutter_mason.git
+      url: "https://github.com/PT-Akar-Inti-Teknologi/ait_flutter_mason.git"
       path: ait_new_page
   ait_new_package:
     git:
-      url: https://github.com/PT-Akar-Inti-Teknologi/ait_flutter_mason.git
+      url: "https://github.com/PT-Akar-Inti-Teknologi/ait_flutter_mason.git"
       path: ait_new_package
-  ait_cubit:
-    git:
-      url: https://github.com/PT-Akar-Inti-Teknologi/ait_flutter_mason.git
-      path: ait_cubit
   ait_entity:
     git:
-      url: https://github.com/PT-Akar-Inti-Teknologi/ait_flutter_mason.git
+      url: "https://github.com/PT-Akar-Inti-Teknologi/ait_flutter_mason.git"
       path: ait_entity
+  ait_cubit:
+    path: "ait_cubit/"
+

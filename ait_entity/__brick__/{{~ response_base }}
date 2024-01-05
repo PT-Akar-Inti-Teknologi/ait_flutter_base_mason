@@ -1,0 +1,9 @@
+@freezed
+class {{response}} with _${{response}} {
+  const factory {{response}}({
+    {{> response_variable_base }}
+  }) = _{{response}};
+
+  factory {{response}}.fromJson(Map<String, dynamic> json) =>
+      _${{response}}FromJson(json);
+}

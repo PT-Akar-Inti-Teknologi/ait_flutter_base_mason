@@ -1,0 +1,13 @@
+@freezed
+  class {{> object_naming_base }} with _${{> object_naming_base }} {
+    const factory {{> object_naming_base }}({
+    {{> response_variable_base}}
+    }) = {{> object_naming_base }};
+    factory {{> object_naming_base }}.fromJson(Map<String, dynamic> json) =>
+        _${{type}}{{#is_param}}Request{{/is_param}}{{^is_param}}Response{{/is_param}}FromJson(json);
+  }
+{{#object}}
+{{#is_object}}
+{{> response_child_base}}
+{{/is_object}}
+{{/object}}

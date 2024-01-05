@@ -1,5 +1,4 @@
-
-  const factory {{entity}}({
+const factory {{entity}}({
     {{#object}}
     {{#is_list}}required List<{{type}}> {{name.camelCase()}},{{/is_list}}
     {{^is_list}}required {{type}} {{name.camelCase()}},{{/is_list}}

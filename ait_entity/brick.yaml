@@ -11,3 +11,7 @@ vars:
     description: Your name
     default: Dash
     prompt: What is your name?
+  is_param:
+    type: boolean
+    description: Is this model used as a request
+    prompt: Is Your Model a request

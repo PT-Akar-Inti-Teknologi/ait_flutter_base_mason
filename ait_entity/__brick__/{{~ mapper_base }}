@@ -1,0 +1,7 @@
+extension {{response}}Mapper on {{response}} {
+  {{entity}} get toEntity {
+      return {{entity}}(
+      {{> mapper_variable_base}}
+      );
+    }
+  }

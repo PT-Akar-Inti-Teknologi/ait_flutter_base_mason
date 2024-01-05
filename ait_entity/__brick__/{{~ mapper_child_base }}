@@ -1,0 +1,14 @@
+extension {{type}}{{#is_param}}Request{{/is_param}}{{^is_param}}Response{{/is_param}}Mapper on {{> object_naming_base}} {
+  {{type}}{{#is_param}}Param{{/is_param}} get toEntity {
+      return {{type}}{{#is_param}}Param{{/is_param}}(
+      {{> mapper_variable_base}}
+      );
+    }
+  }
+
+
+{{#object}}
+{{#is_object}}
+{{> mapper_child_base}}
+{{/is_object}}
+{{/object}}

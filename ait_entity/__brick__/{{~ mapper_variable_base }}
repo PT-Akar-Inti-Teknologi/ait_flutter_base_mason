@@ -1,0 +1,10 @@
+    {{#object}}
+    {{^is_object}}
+      {{^is_string}}{{name.camelCase()}}: {{name.camelCase()}} ?? {{default}},{{/is_string}}
+      {{#is_string}}{{name.camelCase()}}: {{name.camelCase()}} ?? '{{default}}',{{/is_string}}
+    {{/is_object}}
+    {{#is_object}}
+      {{^is_list}}{{name.camelCase()}}: {{name.camelCase()}}?.toEntity ?? const {{> object_naming_base}}().toEntity,{{/is_list}}
+      {{#is_list}}{{name.camelCase()}}: {{name.camelCase()}}?.map((e)=>e.toEntity).toList() ?? [],{{/is_list}}
+    {{/is_object}}
+    {{/object}}

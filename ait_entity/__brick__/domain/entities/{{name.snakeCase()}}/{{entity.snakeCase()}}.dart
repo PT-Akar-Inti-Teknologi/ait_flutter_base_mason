@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part '{{name.snakeCase()}}.freezed.dart';
+part '{{entity.snakeCase()}}.freezed.dart';
 
 @freezed
 class {{entity}} with _${{entity}} {

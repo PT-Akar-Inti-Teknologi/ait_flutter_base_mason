@@ -8,14 +8,8 @@ class {{entity}} with _${{entity}} {
     {{> entity_variable_base}}
   }) = _{{entity}};
 }
-
 {{#object}}
 {{#is_object}}
 {{> entity_child_base}}
-  {{#object}}
-  {{#is_object}}
-  {{> entity_child_base}}
-  {{/is_object}}
-  {{/object}}
 {{/is_object}}
 {{/object}}

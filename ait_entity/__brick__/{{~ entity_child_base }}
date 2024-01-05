@@ -4,3 +4,8 @@ class {{type}} with _${{type}} {
     {{> entity_variable_base}}
   }) = _{{type}};
 }
+{{#object}}
+{{#is_object}}
+{{> entity_child_base}}
+{{/is_object}}
+{{/object}}

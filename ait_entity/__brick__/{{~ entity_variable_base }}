@@ -1,4 +1,10 @@
     {{#object}}
+    {{^is_object}}
     {{#is_list}}required List<{{type}}> {{name.camelCase()}},{{/is_list}}
     {{^is_list}}required {{type}} {{name.camelCase()}},{{/is_list}}
+    {{/is_object}}
+    {{#is_object}}
+    {{#is_list}}required List<{{> object_naming_base }}> {{name.camelCase()}},{{/is_list}}
+    {{^is_list}}required {{> object_naming_base }} {{name.camelCase()}},{{/is_list}}
+    {{/is_object}}
     {{/object}}

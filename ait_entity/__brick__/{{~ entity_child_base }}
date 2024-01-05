@@ -1,8 +1,8 @@
 @freezed
-class {{type}} with _${{type}} {
-  const factory {{type}}({
+class {{> object_naming_base }} with _${{> object_name_base }} {
+  const factory {{> object_naming_base }}({
     {{> entity_variable_base}}
-  }) = _{{type}};
+  }) = _{{> object_naming_base }};
 }
 {{#object}}
 {{#is_object}}

@@ -20,24 +20,25 @@ class {{name.pascalCase()}}UI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const BasePage<{{name.pascalCase()}}Cubit,{{name.pascalCase()}}State>(
-    child: DesignScaffold(
-      body: Center(
-      child: Column(
-      children :[
-
-                  ...BlocFieldWrapper.from<{{name.pascalCase()}}Cubit, {{name.pascalCase()}}State>(
-                      BlocProvider.of<{{name.pascalCase()}}Cubit>(context), context),
-              Placeholder(
+    return BasePage<{{name.pascalCase()}}Cubit, {{name.pascalCase()}}State>(
+      child: DesignScaffold(
+        body: Center(
+          child: Column(
+            children: [
+              {{#use_formx}}
+              ...BlocFieldWrapper.from<{{name.pascalCase()}}Cubit, {{name.pascalCase()}}State>(
+                  BlocProvider.of<{{name.pascalCase()}}Cubit>(context), context),
+              {{/use_formx}}
+              const Placeholder(
                 child: Text(
-                    '{{name}}',
-                    style: TextStyle(fontSize: 32, color: Colors.black),
-                  ),
-                )
-      ],
-      );
+                  'new_cubit',
+                  style: TextStyle(fontSize: 32, color: Colors.black),
+                ),
               ),
-       )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

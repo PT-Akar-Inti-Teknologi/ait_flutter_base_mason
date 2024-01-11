@@ -1,0 +1,9 @@
+    {{#object}}
+    {{^is_object}}
+      {{name.camelCase()}}: {{name.camelCase()}} ,
+    {{/is_object}}
+    {{#is_object}}
+      {{^is_list}}{{name.camelCase()}}: {{name.camelCase()}}.fromEntity ,{{/is_list}}
+      {{#is_list}}{{name.camelCase()}}: {{name.camelCase()}}.map((e)=>e.fromEntity).toList() ,{{/is_list}}
+    {{/is_object}}
+    {{/object}}

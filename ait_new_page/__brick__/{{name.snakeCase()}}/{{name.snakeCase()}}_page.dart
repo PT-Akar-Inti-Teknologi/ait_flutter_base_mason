@@ -23,12 +23,19 @@ class {{name.pascalCase()}}UI extends StatelessWidget {
     return const BasePage<{{name.pascalCase()}}Cubit,{{name.pascalCase()}}State>(
     child: DesignScaffold(
       body: Center(
-              child: Placeholder(
+      child: Column(
+      children :[
+
+                  ...BlocFieldWrapper.from<{{name.pascalCase()}}Cubit, {{name.pascalCase()}}State>(
+                      BlocProvider.of<{{name.pascalCase()}}Cubit>(context), context),
+              Placeholder(
                 child: Text(
                     '{{name}}',
                     style: TextStyle(fontSize: 32, color: Colors.black),
                   ),
-                ),
+                )
+      ],
+      );
               ),
        )
     );

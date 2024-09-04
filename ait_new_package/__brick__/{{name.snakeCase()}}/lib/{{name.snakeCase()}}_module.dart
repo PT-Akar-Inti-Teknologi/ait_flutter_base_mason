@@ -3,7 +3,7 @@ import 'src/data/datasources/{{name.snakeCase()}}_remote_ds.dart';
 import 'src/data/repositories/{{name.snakeCase()}}_repository_impl.dart';
 import 'src/domain/repositories/_repositories.dart';
 
-class {{name.pascalCase()}} {
+class {{name.pascalCase()}}Module {
     Future<void> call() async {
     // repository
 

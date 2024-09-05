@@ -5,10 +5,11 @@ import 'src/domain/repositories/_repositories.dart';
 
 class {{name.pascalCase()}}Module {
     Future<void> call() async {
-    // repository
+      // repository
+      di.registerLazySingleton<{{name.pascalCase()}}Repository> (()=> {{name.pascalCase()}}RepositoryImpl(di()));
 
-    di.registerLazySingleton<{{name.pascalCase()}}Repository> (()=> {{name.pascalCase()}}RepositoryImpl(di()));
-    di.registerLazySingleton<{{name.pascalCase()}}RemoteDs> (()=> {{name.pascalCase()}}RemoteDsImpl(di()));
+      // datasource
+      di.registerLazySingleton<{{name.pascalCase()}}RemoteDs> (()=> {{name.pascalCase()}}RemoteDsImpl(di()));
 
-      }
+    }
   }
